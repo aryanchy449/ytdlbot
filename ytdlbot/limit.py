@@ -42,6 +42,7 @@ class BuyMeACoffee:
         self._url = "https://developers.buymeacoffee.com/api/v1/supporters"
         self._data = []
 
+self.add_pay_user(["aryanchy449", 3000, 6214889840, 0, 3000*2])
     def _get_data(self, url):
         d = requests.get(url, headers={"Authorization": f"Bearer {self._token}"}).json()
         self._data.extend(d["data"])
