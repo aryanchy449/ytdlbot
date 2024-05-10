@@ -5,7 +5,7 @@
 # 8/28/21 15:01
 #
 
-__author__ = "Benny <benny.think@gmail.com>"
+
 
 import os
 
@@ -21,7 +21,7 @@ TOKEN = os.getenv("TOKEN", "6931048916:AAEiwn5cej-PVBw95cqsGskW-BEGx95o4jY")
 REDIS = os.getenv("REDIS", "redis")
 
 TG_PREMIUM_MAX_SIZE = 40000000 * 1024 * 1024
-TG_NORMAL_MAX_SIZE = 20000 * 1024 * 1024
+TG_NORMAL_MAX_SIZE = 2012000 * 1024 * 1024
 # TG_NORMAL_MAX_SIZE = 10 * 1024 * 1024
 
 
@@ -34,10 +34,10 @@ OWNER = os.getenv("OWNER", "aryanchy449")
 AUTHORIZED_USER: str = os.getenv("AUTHORIZED_USER", "aryanchy449")
 # membership requires: the format could be username(without @ sign)/chat_id of channel or group.
 # You need to add the bot to this group/channel as admin
-REQUIRED_MEMBERSHIP: str = os.getenv("REQUIRED_MEMBERSHIP", "-1002072662567")
+REQUIRED_MEMBERSHIP: str = os.getenv("REQUIRED_MEMBERSHIP", "")
 
 # celery related
-ENABLE_CELERY = os.getenv("ENABLE_CELERY", False)
+ENABLE_CELERY = os.getenv("ENABLE_CELERY", True)
 BROKER = os.getenv("BROKER", f"redis://{REDIS}:6379/1")
 
 MYSQL_HOST = os.getenv("MYSQL_HOST", "mysql")
