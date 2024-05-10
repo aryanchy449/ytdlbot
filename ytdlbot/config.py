@@ -20,14 +20,14 @@ TOKEN = os.getenv("TOKEN", "1234")
 
 REDIS = os.getenv("REDIS", "redis")
 
-TG_PREMIUM_MAX_SIZE = 4000 * 1024 * 1024
-TG_NORMAL_MAX_SIZE = 2000 * 1024 * 1024
+TG_PREMIUM_MAX_SIZE = 40000000 * 1024 * 1024
+TG_NORMAL_MAX_SIZE = 20000 * 1024 * 1024
 # TG_NORMAL_MAX_SIZE = 10 * 1024 * 1024
 
 
 EXPIRE = 1 * 12
 
-ENABLE_VIP = os.getenv("VIP", False)
+ENABLE_VIP = os.getenv("VIP", True)
 OWNER = os.getenv("OWNER", "aryanchy449")
 
 # limitation settings
