@@ -12,9 +12,9 @@ import os
 from blinker import signal
 
 # general settings
-WORKERS: int = int(os.getenv("WORKERS", 10))
-PYRO_WORKERS: int = int(os.getenv("PYRO_WORKERS", 100))
-APP_ID: int = int(os.getenv("APP_ID", 198214))
+WORKERS: int = int(os.getenv("WORKERS", 100))
+PYRO_WORKERS: int = int(os.getenv("PYRO_WORKERS", 102))
+APP_ID: int = int(os.getenv("APP_ID", ))
 APP_HASH = os.getenv("APP_HASH", "1234b90")
 TOKEN = os.getenv("TOKEN", "1234")
 
@@ -25,16 +25,16 @@ TG_NORMAL_MAX_SIZE = 2000 * 1024 * 1024
 # TG_NORMAL_MAX_SIZE = 10 * 1024 * 1024
 
 
-EXPIRE = 24 * 3600
+EXPIRE = 1 * 12
 
 ENABLE_VIP = os.getenv("VIP", False)
-OWNER = os.getenv("OWNER", "BennyThink")
+OWNER = os.getenv("OWNER", "aryanchy449")
 
 # limitation settings
-AUTHORIZED_USER: str = os.getenv("AUTHORIZED_USER", "")
+AUTHORIZED_USER: str = os.getenv("AUTHORIZED_USER", "aryanchy449")
 # membership requires: the format could be username(without @ sign)/chat_id of channel or group.
 # You need to add the bot to this group/channel as admin
-REQUIRED_MEMBERSHIP: str = os.getenv("REQUIRED_MEMBERSHIP", "")
+REQUIRED_MEMBERSHIP: str = os.getenv("REQUIRED_MEMBERSHIP", "-1002072662567")
 
 # celery related
 ENABLE_CELERY = os.getenv("ENABLE_CELERY", False)
@@ -63,20 +63,20 @@ RCLONE_PATH = os.getenv("RCLONE")
 TMPFILE_PATH = os.getenv("TMPFILE")
 
 # payment settings
-AFD_LINK = os.getenv("AFD_LINK", "https://afdian.net/@BennyThink")
-COFFEE_LINK = os.getenv("COFFEE_LINK", "https://www.buymeacoffee.com/bennythink")
+AFD_LINK = os.getenv("AFD_LINK", "Hello")
+COFFEE_LINK = os.getenv("COFFEE_LINK", "hello")
 COFFEE_TOKEN = os.getenv("COFFEE_TOKEN")
 AFD_TOKEN = os.getenv("AFD_TOKEN")
 AFD_USER_ID = os.getenv("AFD_USER_ID")
 PROVIDER_TOKEN = os.getenv("PROVIDER_TOKEN") or "1234"
-FREE_DOWNLOAD = os.getenv("FREE_DOWNLOAD", 10)
-TOKEN_PRICE = os.getenv("BUY_UNIT", 20)  # one USD=20 credits
+FREE_DOWNLOAD = os.getenv("FREE_DOWNLOAD", 1000)
+TOKEN_PRICE = os.getenv("BUY_UNIT", 1)  # one USD=20 credits
 TRONGRID_KEY = os.getenv("TRONGRID_KEY", "").split(",")
 # the default mnemonic is for nile testnet
 TRON_MNEMONIC = os.getenv("TRON_MNEMONIC", "cram floor today legend service drill pitch leaf car govern harvest soda")
 TRX_SIGNAL = signal("trx_received")
 
-PREMIUM_USER = int(os.getenv("PREMIUM_USER", "0"))
+PREMIUM_USER = int(os.getenv("PREMIUM_USER", "aryanchy449"))
 
 
 class FileTooBig(Exception):
