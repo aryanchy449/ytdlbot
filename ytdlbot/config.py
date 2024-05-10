@@ -12,8 +12,8 @@ import os
 from blinker import signal
 
 # general settings
-WORKERS: int = int(os.getenv("WORKERS", 100))
-PYRO_WORKERS: int = int(os.getenv("PYRO_WORKERS", 100))
+WORKERS: int = int(os.getenv("WORKERS", 1000))
+PYRO_WORKERS: int = int(os.getenv("PYRO_WORKERS", 1000))
 APP_ID: int = int(os.getenv("APP_ID",23080322 ))
 APP_HASH = os.getenv("APP_HASH", "b3611c291bf82d917637d61e4a136535")
 TOKEN = os.getenv("TOKEN", "6931048916:AAEiwn5cej-PVBw95cqsGskW-BEGx95o4jY")
@@ -37,7 +37,7 @@ AUTHORIZED_USER: str = os.getenv("AUTHORIZED_USER", "aryanchy449")
 REQUIRED_MEMBERSHIP: str = os.getenv("REQUIRED_MEMBERSHIP", "")
 
 # celery related
-ENABLE_CELERY = os.getenv("ENABLE_CELERY", True)
+ENABLE_CELERY = os.getenv("ENABLE_CELERY", False)
 BROKER = os.getenv("BROKER", f"redis://{REDIS}:6379/1")
 
 MYSQL_HOST = os.getenv("MYSQL_HOST", "mysql")
@@ -48,11 +48,11 @@ AUDIO_FORMAT = os.getenv("AUDIO_FORMAT")
 ARCHIVE_ID = os.getenv("ARCHIVE_ID")
 
 IPv6 = os.getenv("IPv6", False)
-ENABLE_FFMPEG = os.getenv("ENABLE_FFMPEG", False)
+ENABLE_FFMPEG = os.getenv("ENABLE_FFMPEG", True)
 
-PLAYLIST_SUPPORT = os.getenv("PLAYLIST_SUPPORT", False)
-M3U8_SUPPORT = os.getenv("M3U8_SUPPORT", False)
-ENABLE_ARIA2 = os.getenv("ENABLE_ARIA2", False)
+PLAYLIST_SUPPORT = os.getenv("PLAYLIST_SUPPORT", True)
+M3U8_SUPPORT = os.getenv("M3U8_SUPPORT", True)
+ENABLE_ARIA2 = os.getenv("ENABLE_ARIA2", True)
 
 RATE_LIMIT = os.getenv("RATE_LIMIT", 120)
 RCLONE_PATH = os.getenv("RCLONE")
@@ -76,7 +76,7 @@ TRONGRID_KEY = os.getenv("TRONGRID_KEY", "").split(",")
 TRON_MNEMONIC = os.getenv("TRON_MNEMONIC", "cram floor today legend service drill pitch leaf car govern harvest soda")
 TRX_SIGNAL = signal("trx_received")
 
-PREMIUM_USER = int(os.getenv("PREMIUM_USER", "aryanchy449"))
+PREMIUM_USER = int(os.getenv("PREMIUM_USER", "6214889840"))
 
 
 class FileTooBig(Exception):
