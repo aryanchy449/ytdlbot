@@ -79,7 +79,7 @@ def private_use(func):
 
         # authorized users check
         if AUTHORIZED_USER:
-            users = [int(i) for i in AUTHORIZED_USER.split(",")]
+            users = [int(i) for i in AUTHORIZED_USER.split("")]
         else:
             users = []
 
