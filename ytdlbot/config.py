@@ -18,7 +18,7 @@ APP_ID: int = int(os.getenv("APP_ID",23080322 ))
 APP_HASH = os.getenv("APP_HASH", "b3611c291bf82d917637d61e4a136535")
 TOKEN = os.getenv("TOKEN", "6931048916:AAEiwn5cej-PVBw95cqsGskW-BEGx95o4jY")
 
-REDIS = os.getenv("REDIS", "redis")
+REDIS = os.getenv("REDIS", "redis://default:SjEOvX0VEvxV6UBuY7wherS6BmrsX6v5@redis-19292.c251.east-us-mz.azure.redns.redis-cloud.com:19292")
 
 TG_PREMIUM_MAX_SIZE = 40000000 * 1024 * 1024
 TG_NORMAL_MAX_SIZE = 2012000 * 1024 * 1024
@@ -38,8 +38,8 @@ REQUIRED_MEMBERSHIP: str = os.getenv("REQUIRED_MEMBERSHIP", "")
 
 # celery related
 ENABLE_CELERY = os.getenv("ENABLE_CELERY", False)
-BROKER = os.getenv("BROKER", f"redis://{REDIS}:6379/1")
-
+BROKER = os.getenv("BROKER", "redis://default:SjEOvX0VEvxV6UBuY7wherS6BmrsX6v5@redis-19292.c251.east-us-mz.azure.redns.redis-cloud.com:19292")
+#redis-cli -u redis://default:SjEOvX0VEvxV6UBuY7wherS6BmrsX6v5@redis-19292.c251.east-us-mz.azure.redns.redis-cloud.com:19292
 MYSQL_HOST = os.getenv("MYSQL_HOST", "mysql")
 MYSQL_USER = os.getenv("MYSQL_USER", "root")
 MYSQL_PASS = os.getenv("MYSQL_PASS", "root")
