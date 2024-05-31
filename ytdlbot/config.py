@@ -38,7 +38,7 @@ REQUIRED_MEMBERSHIP: str = os.getenv("REQUIRED_MEMBERSHIP", "")
 
 # celery related
 ENABLE_CELERY = os.getenv("ENABLE_CELERY", False)
-BROKER = os.getenv("BROKER", "redis://default:SjEOvX0VEvxV6UBuY7wherS6BmrsX6v5@redis-19292.c251.east-us-mz.azure.redns.redis-cloud.com:19292")
+BROKER = os.getenv("BROKER", f"redis://default:SjEOvX0VEvxV6UBuY7wherS6BmrsX6v5@redis-19292.c251.east-us-mz.azure.redns.redis-cloud.com:19292")
 #redis-cli -u redis://default:SjEOvX0VEvxV6UBuY7wherS6BmrsX6v5@redis-19292.c251.east-us-mz.azure.redns.redis-cloud.com:19292
 MYSQL_HOST = os.getenv("MYSQL_HOST", "mysql")
 MYSQL_USER = os.getenv("MYSQL_USER", "root")
